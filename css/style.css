@@ -98,14 +98,13 @@ nav{
 }
 
 .big-bottom{
-    height: 45%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: ;
+    justify-content: space-between;
 }
 
 nav ul{
+    height: 50%;
     list-style-type: none;
     overflow-y: auto;
 }
@@ -121,7 +120,8 @@ nav ul li{
 }
 
 .bottom img{
-    height: 15px;
+    height: 20px;
+    padding-top: 5px;
     margin-bottom: 5px;
     vertical-align: middle;
 }
@@ -192,6 +192,7 @@ p:hover{
 /* lavoro contenuto principale */
 
 .box{
+    min-width: 500px;
     width: calc(100% - 200px);
     background-color: hsl(219deg 26% 11%);
 }
@@ -202,7 +203,6 @@ p:hover{
     width: 100%;
     position: fixed;
     z-index: 2;
-    
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -213,9 +213,9 @@ p:hover{
     border: 1px solid white;
     border-radius: 20px;
     position: absolute;
-    right: 18%;
+    right: 250px;
     top: 20%;
-    transition: all 3s;
+    transition: font-size 3s;
 }
 
 /* effetto hover barra */
@@ -233,6 +233,15 @@ p:hover{
     padding-bottom: 30px;
     overflow-y: auto;
 }
+
+.content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: hsl(0deg 0% 64%); 
+    border-radius: 10px;
+  }
 
 .content ul{
     list-style-type: none;
@@ -261,7 +270,7 @@ h1, .title{
 .recent{
     margin-top: 40px;
     display: flex;
-    justify-content: space-around;
+    gap: 10px;
 }
 
 .album{
@@ -484,6 +493,14 @@ footer i{
 }
 
 @media screen and (max-width: 700px) {
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .top a{
+        right: 200px;
+    }
     
     .recent{
         flex-flow: row wrap;
@@ -495,6 +512,7 @@ footer i{
 }
 
 @media screen and (max-width: 600px) {
+
     nav{
         width: 40px
     }
@@ -528,12 +546,24 @@ footer i{
         display: none;
     }
 
+    .bottom img{
+        margin-left: 6px;
+    }
+
+    .acc img{
+        margin-left: 5px;
+    }
+
     .bottom p{
         display: none;
     }
 
     .bottom hr{
         display: none;
+    }
+
+    .top a{
+        right: 80px;
     }
 
     .box{
