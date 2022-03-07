@@ -55,6 +55,7 @@ nav{
 .i-text img{
     height: 30px;
     margin-bottom: 10px;
+    filter: brightness(50%) grayscale(50%);
 }
 
 .i-text p{
@@ -96,6 +97,7 @@ nav{
 
 nav ul{
     list-style-type: none;
+    overflow: auto;
 }
 
 nav ul li{
@@ -151,22 +153,89 @@ hr{
     background-color: hsl(219deg 26% 11%);
 }
 
+/* barra con bottone */
 .top{
     height: 80px;
     width: 100%;
     position: fixed;
     z-index: 2;
-    text-align: right;
-    line-height: 90px;
-    background-color: rgba(0, 0, 0, 0.2);
+    
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
+.top a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border: 1px solid white;
+    border-radius: 20px;
+    position: absolute;
+    right: 18%;
+    top: 20%;
+}
+
+/* contenuto centrale */
 
 .content{
     height: 100%;
     width: 100%;
-    padding-top: 80px;
+    padding: 80px 20px;
+    padding-bottom: 30px;
     overflow-y: auto;
 }
+
+.content ul{
+    list-style-type: none;
+    margin-top: 10px;
+    color: hsl(0deg 0% 64%);
+    font-size: small;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1, .title{
+    display: block;
+    margin-top: 30px;
+    font-size: larger;
+}
+
+
+.recent{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.album{
+    width: calc(100% / 6 - 10px);
+    text-align: center;
+}
+
+.album img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.subs{
+    color: hsl(0deg 0% 64%);
+    font-size: x-small;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.mix{
+    display: flex;
+    gap: 10px;
+}
+
+.circle img{
+    border-radius: 50%;
+}
+
+/* sezione footer */
 
 footer{
     height: 80px;
@@ -175,4 +244,89 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+}
+
+.rip, .right{
+    width: 25%;
+    position: relative;
+}
+
+.rip{
+    display: flex;
+    align-items: center;
+}
+
+.rip img{
+    height: 50px;
+    margin-left: 10px;
+}
+
+.altext{
+    width: 50%;
+    margin-left: 10px;
+}
+
+.grey{
+    color: hsl(0deg 0% 64%);
+    font-size: x-small;
+}
+
+footer i{
+    color: hsl(0deg 0% 64%);
+    padding: 5px;
+}
+
+.center{
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.commands{
+    width: 100%;
+    text-align: center;
+}
+
+.commands i{
+    font-size: x-large;
+    margin: 10px;
+}
+
+.timer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.charge{
+    width: 70%;
+    background-color: hsl(0deg 0% 35%);
+    border: 1px solid hsl(0deg 0% 35%);   
+}
+
+.charged{
+    width: 30%;
+    background-color: hsl(0deg 0% 64%);
+    border: 1px solid hsl(0deg 0% 64%); 
+}
+
+.time{
+    width: 20%;
+    text-align: center;
+    font-size: x-small;
+    color: hsl(0deg 0% 64%);
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .two{
+    width: 30%;
 }
