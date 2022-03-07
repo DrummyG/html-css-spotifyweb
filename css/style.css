@@ -9,6 +9,7 @@ body{
     height: 100vh;
     width: 100vw;
     color: white;
+    min-width: 500px;
 }
 
 .container{
@@ -54,6 +55,7 @@ nav{
 
 .i-text img{
     height: 30px;
+    border-left: 1px solid black;
     margin-bottom: 10px;
     filter: brightness(50%) grayscale(50%);
 }
@@ -62,7 +64,7 @@ nav{
     display: inline-block;
     width: 60%;
     margin-left: 10px;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: small;
 }
 
@@ -95,9 +97,17 @@ nav{
     font-size: large;
 }
 
+.big-bottom{
+    height: 45%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: ;
+}
+
 nav ul{
     list-style-type: none;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 nav ul li{
@@ -106,21 +116,21 @@ nav ul li{
 }
 
 .bottom{
-    position: absolute;
-    bottom: 0;
     font-size: xx-small;
+    background-color: black;
 }
 
 .bottom img{
-    height: 10px;
+    height: 15px;
     margin-bottom: 5px;
     vertical-align: middle;
 }
 
 .bottom p{
+    height: 15px;
     margin-bottom: 5px;
     display: inline-block;
-    line-height: 10px;
+    line-height: 15px;
 }
 
 hr{
@@ -140,6 +150,7 @@ hr{
     width: 20px;
     border-radius: 50%;
     vertical-align: middle;
+    background-color: #696969;
 }
 
 .acc p{
@@ -148,12 +159,17 @@ hr{
 
 /* effetti hover barra laterale */
 
-.i-text img:hover{
+.select{
+    width: 100%;
+    display: flex;
+}
+
+.select:hover img{
     border-left: 1px solid hsl(84deg 76% 53%);
     filter: brightness(100%);
 }
 
-.i-text img:hover + p{
+.select:hover p{
     color: white;
 }
 
@@ -453,4 +469,74 @@ footer i{
 
 .charge:hover .charged .fa-circle{
     display: inline-flex;
+}
+
+/* parte media */
+
+@media screen and (max-width: 1100px) {
+    .recent{
+        flex-flow: row wrap;
+    }
+
+    .album{
+        width: calc(100% / 4 - 10px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .recent{
+        flex-flow: row wrap;
+    }
+
+    .album{
+        width: calc(100% / 2 - 10px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav{
+        width: 40px
+    }
+
+    .logo img{
+        display: none;
+    }
+
+    .logo::after{
+        content: url(../img/logo-small.svg);
+        padding-left: 5px;
+    }
+
+    .left{
+        padding-left: 5px;
+    }
+
+    .select p{
+        display: none;
+    }
+
+    .mini-title{
+        display: none;
+    }
+
+    .create{
+        display: none;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .bottom p{
+        display: none;
+    }
+
+    .bottom hr{
+        display: none;
+    }
+
+    .box{
+        width: calc(100% - 40px);
+    }
 }
