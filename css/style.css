@@ -101,8 +101,18 @@ nav{
 
 nav ul{
     height: calc(100vh - 480px);
+    width: 95%;
     list-style-type: none;
     overflow-y: auto;
+}
+/* stilizzazione navbar */
+nav ul::-webkit-scrollbar {
+    width: 5px;
+}
+
+nav ul::-webkit-scrollbar-thumb {
+    background: hsl(0deg 0% 64%); 
+    border-radius: 10px;
 }
 
 nav ul li{
