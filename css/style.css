@@ -75,7 +75,7 @@ nav{
     color: white;
     font-size: large;
 }
-
+/* playlist */
 .create{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -109,7 +109,7 @@ nav ul li{
     margin-top: 10px;
     font-size: small;
 }
-
+/* zona inferiore */
 .bottom{
     width: 100%;
     position: relative;
@@ -232,7 +232,7 @@ p:hover{
     padding-bottom: 30px;
     overflow-y: auto;
 }
-
+/* barra laterale */
 .content::-webkit-scrollbar {
     width: 10px;
 }
@@ -240,8 +240,8 @@ p:hover{
 .content::-webkit-scrollbar-thumb {
     background: hsl(0deg 0% 64%); 
     border-radius: 10px;
-  }
-
+}
+/* lista superiore */
 .content ul{
     list-style-type: none;
     margin-top: 10px;
@@ -265,13 +265,12 @@ h1, .title{
     font-size: larger;
 }
 
-
 .recent{
     margin-top: 40px;
     display: flex;
     gap: 10px;
 }
-
+/* immagine con testo */
 .album{
     width: calc(100% / 6 - 10px);
     text-align: center;
@@ -386,7 +385,7 @@ footer i{
     flex-flow: row wrap;
     justify-content: center;
 }
-
+/* comandi superiori centrali */
 .commands{
     width: 100%;
     display: flex;
@@ -406,7 +405,7 @@ footer i{
     height: 42px;
     text-align: center;
 }
-
+/* barra del tempo inferiore */
 .timer{
     width: 100%;
     display: flex;
