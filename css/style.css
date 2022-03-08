@@ -540,6 +540,11 @@ footer i{
         display: none;
     }
 
+    .bottom{
+        position: absolute;
+        top: 89%;
+    }
+
     .bottom img{
         margin-left: 6px;
     }
