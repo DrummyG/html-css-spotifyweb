@@ -269,6 +269,13 @@ p:hover{
     position: relative;
 }
 
+.content ul li a{
+    text-decoration: none;
+    color: hsl(0deg 0% 64%);
+    background-color: rgb(73, 110, 17);
+    border-radius: 5px;
+}
+
 h1, .title{
     display: block;
     margin-top: 30px;
@@ -286,11 +293,13 @@ h1, .title{
     text-align: center;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .album img{
     width: 100%;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .subs{
@@ -311,17 +320,20 @@ h1, .title{
 
 /* effetti hover contenuto principale */
 
+.album:hover{
+    background-color: #222326;
+}
+
 .album i{
-    width: 100%;
-    padding-top: 50%;
-    padding-bottom: 41%;
     font-size: xx-large;
     position: absolute;
-    top: -5%;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    right: 20px;
     z-index: 2;
-    display: none;
+    opacity: 0;
+    color: hsl(84deg 76% 53%);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
 }
 
 ul li:hover{
@@ -330,7 +342,8 @@ ul li:hover{
 }
 
 .album img:hover + i{
-    display: inline-block;
+    opacity: 1;
+    bottom: 45%;
 }
 
 .color{
