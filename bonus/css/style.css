@@ -318,6 +318,37 @@ h2{
     width: 100%;
 }
 
+.descrizione{
+    width: 100%;
+    font-size: x-large;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    display: flex;
+}
+
+.descrizione p{
+    display: inline-block;
+}
+
+.canzone{
+    width: 57%;
+}
+
+.descrizione .numero{
+    width: 28%;
+}
+
+.lenght{
+    
+}
+
+.separator{
+    width: 100%;
+    border: 1px solid white;
+    background-color: white;
+    margin-bottom: 30px;
+}
+
 .toto{
     height: 10vw;
     width: 100%;

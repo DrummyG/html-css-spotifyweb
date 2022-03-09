@@ -317,10 +317,6 @@ h1, .title{
 
 /* effetti hover contenuto principale */
 
-.album:hover{
-    background-color: #222326;
-}
-
 .album i{
     font-size: xx-large;
     position: absolute;
@@ -333,14 +329,14 @@ h1, .title{
     border-radius: 50%;
 }
 
-ul li:hover{
-    color: white;
-    cursor: pointer;
-}
-
 .album img:hover + i{
     opacity: 1;
     bottom: 45%;
+}
+
+ul li:hover{
+    color: white;
+    cursor: pointer;
 }
 
 .color{
