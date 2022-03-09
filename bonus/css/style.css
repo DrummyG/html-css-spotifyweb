@@ -209,11 +209,11 @@ p:hover{
     width: 100%;
     position: fixed;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .top a{
     color: white;
+    background-color: rgba(0, 0, 0, 0.5);
     text-decoration: none;
     padding: 10px 30px;
     border: 1px solid white;
@@ -235,7 +235,6 @@ p:hover{
 .content{
     height: 100%;
     width: 100%;
-    padding: 80px 20px;
     padding-bottom: 30px;
     overflow-y: auto;
 }
@@ -248,113 +247,141 @@ p:hover{
     background: hsl(0deg 0% 64%); 
     border-radius: 10px;
 }
-/* lista superiore */
-.content ul{
-    list-style-type: none;
-    margin-top: 10px;
-    color: hsl(0deg 0% 64%);
-    font-size: small;
-    text-transform: uppercase;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 20px;
-}
 
-.content ul li{
-    padding: 5px;
-    position: relative;
-}
-
-.content ul li a{
-    text-decoration: none;
-    color: hsl(0deg 0% 64%);
-    background-color: rgb(73, 110, 17);
-    border-radius: 5px;
-}
-
-h1, .title{
-    display: block;
-    margin-top: 30px;
-    font-size: larger;
-}
-
-.recent{
-    margin-top: 40px;
-    display: flex;
-    gap: 10px;
-}
-/* immagine con testo */
-.album{
-    width: calc(100% / 6 - 10px);
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.album img{
+.ground{
     width: 100%;
-    margin-bottom: 10px;
+    height: 50%;
+    background-image: url(../img/chainsawtwo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.scuro{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.name{
+    font-size: small;
+}
+
+h1{
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
+.action{
+    width: 100%;
+    height: 70px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.action .bigger i{
+    line-height: 42px;
+
+}
+
+.action i{
+    font-size: 30px;
+    color: hsl(84deg 76% 53%);
+}
+
+.action a{
+    padding: 5px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+h2{
+    margin-left: 30px;
+}
+
+.lista{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+}
+
+.song{
+    width: 100%;
+}
+
+.toto{
+    height: 10vw;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: larger;
     border-radius: 10px;
 }
 
-.subs{
-    color: hsl(0deg 0% 64%);
-    font-size: x-small;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.toto img{
+    width: 9vw;
+    height: 9vw;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-.mix{
-    display: flex;
-    gap: 10px;
+.toto .title{
+    width: 40%;
 }
 
-.circle img{
-    border-radius: 50%;
+.toto .numero{
+    width: 20%;
+}
+
+.other{
+    font-size: 20px;
 }
 
 /* effetti hover contenuto principale */
 
-.album:hover{
-    background-color: #222326;
+.action .bigger:hover i{
+    font-size: 42px;
 }
 
-.album i{
-    font-size: xx-large;
-    position: absolute;
-    bottom: 0;
-    right: 20px;
-    z-index: 2;
+.toto:hover{
+    background-color: rgb(65, 64, 64);
+}
+
+.tempo{
+    display: inline-block;
+    margin: 20px;
+}
+
+.effetto i{
     opacity: 0;
-    color: hsl(84deg 76% 53%);
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
 }
 
-ul li:hover{
-    color: white;
-    cursor: pointer;
-}
-
-.album img:hover + i{
+.toto:hover .effetto i{
     opacity: 1;
-    bottom: 45%;
 }
 
-.color{
-    width: 50%;
-    border: 1px solid hsl(84deg 76% 53%);
-    background-color: hsl(84deg 76% 53%);
-    position: absolute;
-    bottom: 0;
-    right: 30%;
+.none .toto{
     display: none;
 }
 
-li:hover > .color{
-    display: block;
+.none:hover .other{
+    display: none;
+}
+
+.none:hover .toto{
+    display: flex;
 }
 
 /* sezione footer */
@@ -381,6 +408,8 @@ footer{
 
 .rip img{
     height: 50px;
+    width: 50px;
+    object-fit: cover;
     margin-left: 10px;
 }
 
@@ -498,27 +527,76 @@ footer i{
     display: inline-flex;
 }
 
-/* parte media */
-
-@media screen and (max-width: 1100px) {
-    .recent{
-        flex-flow: row wrap;
-    }
-
-    .album{
-        width: calc(100% / 4 - 10px);
-    }
+.dropdown{
+    position: relative;
+    display: inline-block;
 }
+  
+.dropdown-content{
+    width: 200px;
+    display: none;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    background-color: hsl(0deg 0% 29%);
+    border-radius: 10px;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content .text-menu{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dropdown-content i{
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.dropdown-content p{
+    font-size: small;
+    margin-bottom: 40px;
+}
+
+.dropdown-content a{
+    margin-top: 40px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: hsl(84deg 76% 53%);
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+  
+
+  
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* parte media */
 
 @media screen and (max-width: 700px) {
     
-    .recent{
-        flex-flow: row wrap;
+    .toto{
+        height: 15vw;
     }
 
-    .album{
-        width: calc(100% / 2 - 10px);
+    .toto img{
+        height: 15vw;
+        width: 15vw;
     }
+
+    .toto .effetto{
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
