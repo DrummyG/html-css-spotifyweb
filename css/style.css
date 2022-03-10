@@ -297,7 +297,7 @@ h1, .title{
     border-radius: 10px;
 }
 
-.album .name{
+.album .name p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
