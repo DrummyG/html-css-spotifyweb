@@ -289,14 +289,18 @@ h1, .title{
     width: calc(100% / 6 - 10px);
     text-align: center;
     position: relative;
-    overflow: hidden;
     border-radius: 10px;
 }
 
 .album img{
     width: 100%;
-    margin-bottom: 10px;
     border-radius: 10px;
+}
+
+.album .name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .subs{
@@ -317,21 +321,29 @@ h1, .title{
 
 /* effetti hover contenuto principale */
 
+.diff{
+    position: relative;
+    overflow: hidden;
+}
+
 .album i{
     font-size: xx-large;
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
     right: 20px;
     z-index: 2;
-    opacity: 0;
+    transition: all 1s ease;
     color: hsl(84deg 76% 53%);
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
 }
 
-.album img:hover + i{
-    opacity: 1;
-    bottom: 45%;
+.diff:hover i{
+    bottom: 20%;
+}
+
+.diff i:hover{
+    font-size: 40px;
 }
 
 ul li:hover{
